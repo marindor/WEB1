@@ -3,17 +3,60 @@
   <head>
     <title>WEB1 - Welcome</title>
     <meta charset="utf-8">
+    <style>
+
+      body{
+        margin:0px;
+      }
+      h1{
+        font-size:45px;
+        text-align:center;
+        border-bottom:1px solid gray;
+        margin:0px;
+        padding:20px;
+      }
+      #grid ol{
+        border-right:1px solid gray;
+        width:100px;
+        margin:0px;
+        padding:20px;
+      }
+      #grid{
+        display:grid;
+        grid-template-columns:150px 1fr;
+      }
+      #article{
+        padding-left:25px;
+      }
+      @media(max-width: 800px){
+        #grid{
+          display:block;
+          grid-template-columns:150px 1fr;
+        }
+        #grid ol{
+          border-right:none;
+        }
+        h1{
+          border-bottom:none;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <h1><a href="index.html">WEB</a></h1>
+    <h1>
+      <a href="index.html" class="saw" id="active">WEB</a>
+    </h1>
+    <div id="grid">
     <ol>
-      <li><a href="1.html">HTML</a></li>
-      <li><a href="2.html">CSS</a></li>
-      <li><a href="3.html">JavaScript</a></li>
+      <li><a href="1.html" class="saw">HTML</a></li>
+      <li><a href="2.html" class="saw">CSS</a></li>
+      <li><a href="3.html" class="saw">JavaScript</a></li>
     </ol>
-
-    <h2>WEB이란 무엇인가</h2>
-      <p style="margin-top:40px;">The Web is the common name for the World Wide Web, a subset of the Internet consisting of the pages that can be accessed by a Web browser. Many people assume that the Web is the same as the Internet, and use these terms interchangeably. However, the term Internet actually refers to the global network of servers that makes the information sharing that happens over the Web possible. So, although the Web does make up a large portion of the Internet, but they are not one and same.</p>
+      <div id="article">
+        <h2>WEB이란 무엇인가</h2>
+        <p style="margin-top:40px;">The Web is the common name for the World Wide Web, a subset of the Internet consisting of the pages that can be accessed by a Web browser. Many people assume that the Web is the same as the Internet, and use these terms interchangeably. However, the term Internet actually refers to the global network of servers that makes the information sharing that happens over the Web possible. So, although the Web does make up a large portion of the Internet, but they are not one and same.</p>
+      </div>
+    </div>
   </body>
 </html>
